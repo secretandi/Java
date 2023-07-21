@@ -1,4 +1,4 @@
-package com.Basic;
+package main.Basic;
 
 public class Basic03 {
   public static void main(String[] args) {
