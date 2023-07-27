@@ -6,7 +6,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        basic5();
+        basic11();
 
     }
 
@@ -415,6 +415,12 @@ public class App {
         System.out.print("Luas = " + luas);
 
         userinput.close();
+
+    }
+
+    public static void basic11() {
+
+        System.out.println("Hello Janda");
 
     }
 
