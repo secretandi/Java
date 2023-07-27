@@ -6,7 +6,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        basic10();
+        basic11();
 
     }
 
@@ -486,6 +486,7 @@ public class App {
     }
 
     public static void basic11() {
+        
         Scanner userinput = new Scanner(System.in);
         System.out.print("Secret");
 
