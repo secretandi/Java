@@ -6,7 +6,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        basic9();
+        basic11();
 
     }
 
@@ -401,27 +401,94 @@ public class App {
     public static void basic10() {
 
         Scanner userinput = new Scanner(System.in);
-        int panjang, lebar, luas;
-        
-        //Membuat perhitungan luas persegi panjang
-        //luas = panjang = lebar
-        
+
+        System.out.println("## Persegi ##");
+        int sisi, luas, keliling;
+        // Menghitung luas dan keliling persegi
+        // Luas = Sisi * sisi
+        // Keliling = 4 * Sisi
+
+        System.out.println("======= Luas (Sisi * Sisi)");
+        System.out.print("Sisi = ");
+        sisi = userinput.nextInt();
+        luas = sisi * sisi;
+        System.out.println("Luas = " + luas + "\n");
+
+        System.out.println("======= Keliling (4 * Sisi)");
+        keliling = 4 * sisi;
+        System.out.println("Keliling = " + keliling + "\n\n");
+
+
+        System.out.println("## Persegi Panjang ##");
+        int panjang, lebar;
+        // Menghitung luas dan keliling persegi panjang
+        // Luas = Panjang * Lebar
+        // Keliling = 2 * (PAnjang * Lebar)
+
+        System.out.println("======= Luas (Panjang * Lebar)");
         System.out.print("panjang = ");
         panjang = userinput.nextInt();
-        System.out.print("lebar = ");
+        System.out.print("Lebar = ");
         lebar = userinput.nextInt();
-
         luas = panjang * lebar;
-        System.out.print("Luas = " + luas);
+        System.out.println("Luas = " + luas + "\n");
 
-        userinput.close();
+        System.out.println("======= Keliling (2 * (Panjang + Lebar))");
+        keliling = 2 * (panjang + lebar);
+        System.out.println("Keliling = " + keliling + "\n\n");
 
+
+        System.out.println("## Segitiga ##");
+        int alas, tinggi, panjang_AB, panjang_BC, panjang_AC;
+        double lusa_segitiga;
+        // Menghitung luas dan keliling segitiga
+        // Luas = 0.5 * Alas * Tinggi
+        // Keliling = Panjang AB + Panjang BC + Panjang AC
+
+        System.out.println("======= Luas (1/2 * Alas * Tinggi)");
+        System.out.print("Alas = ");
+        alas = userinput.nextInt();
+        System.out.print("Tinggi = ");
+        tinggi = userinput.nextInt();
+        lusa_segitiga = 1/2 * alas * tinggi;
+        System.out.println("Luas = " + lusa_segitiga + "\n");
+
+        System.out.println("======= Keliling (Panjang AB + BC + AC)");
+        System.out.print("Panjang AB = ");
+        panjang_AB = userinput.nextInt();
+        System.out.print("Panjang BC = ");
+        panjang_BC = userinput.nextInt();
+        System.out.print("Panjang AC = ");
+        panjang_AC = userinput.nextInt();
+        keliling = panjang_AB + panjang_BC + panjang_AC;
+        System.out.println("Keliling = " + keliling + "\n\n");
+
+        
+        System.out.println("## Lingkaran ##");
+        int r, diameter;
+        double luas_lingkaran, keliling_lingkaran;
+        double phi = 3.14;
+        // Menghitung luas dan keliling lingkaran
+        // Luas = PHI * Jari-jari^2
+        // Keliling = PHI * Diameter
+
+        System.out.println("======= Luas (PHI * Jari-jari^2)");
+        System.out.print("Jari-jari = ");
+        r = userinput.nextInt();
+        luas_lingkaran = phi * (r * r);
+        System.out.println("Luas = " + luas_lingkaran + "\n");
+
+        System.out.println("======= Keliling (phi * Diameter)");
+        diameter = 2 * r;
+        keliling_lingkaran = phi * diameter;
+        System.out.println("Keliling = " + keliling_lingkaran + "\n\n");
+        
     }
 
     public static void basic11() {
+        System.out.print("Secret");
 
-        System.out.println("Hello Janda");
-
+        userinput.close();
     }
 
 }
