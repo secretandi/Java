@@ -418,4 +418,10 @@ public class App {
 
     }
 
+    public static void basic11() {
+
+        System.out.println("Hello Janda");
+
+    }
+
 }
