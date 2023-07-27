@@ -483,14 +483,13 @@ public class App {
         keliling_lingkaran = phi * diameter;
         System.out.println("Keliling = " + keliling_lingkaran + "\n\n");
         
+        userinput.close();
     }
 
     public static void basic11() {
         
-        Scanner userinput = new Scanner(System.in);
         System.out.print("Secret");
-
-        userinput.close();
+        
     }
 
 }
