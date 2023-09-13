@@ -2,13 +2,7 @@ package com.basic;
 
 import java.util.Scanner;
 
-public class App {
-
-    public static void main(String[] args) {
-
-        basic11();
-
-    }
+public class Basic {
 
     public static void basic1() {
         // Membuat kalimat
@@ -62,23 +56,23 @@ public class App {
 
     public static void basic5() {
         // Unary (Operasi yang dilakukan pada satu variabel)
-        int angka01 = 5;
-        System.out.printf("Unary '+' = %d menjadi %d\n", angka01, +angka01);
-        System.out.printf("Unary '-' = %d menjadi %d\n\n", angka01, -angka01);
+        int angka = 5;
+        System.out.printf("Unary '+' = %d menjadi %d\n", angka, +angka);
+        System.out.printf("Unary '-' = %d menjadi %d\n\n", angka, -angka);
 
-        angka01 = 5;
-        angka01++;
-        System.out.println("Nilai dengn '++' menjadi " + angka01);
+        angka = 5;
+        angka++;
+        System.out.println("Nilai dengn '++' menjadi " + angka);
 
-        angka01 = 5;
-        angka01--;
-        System.out.println("Nilai dengn '--' menjadi " + angka01);
+        angka = 5;
+        angka--;
+        System.out.println("Nilai dengn '--' menjadi " + angka);
 
-        angka01 = 5;
-        System.out.println("Nilai dengn '++' menjadi " + ++angka01);
+        angka = 5;
+        System.out.println("Nilai dengn '++' menjadi " + ++angka);
 
-        angka01 = 5;
-        System.out.println("Nilai dengn '--' menjadi " + --angka01 + "\n");
+        angka = 5;
+        System.out.println("Nilai dengn '--' menjadi " + --angka + "\n");
 
         // Unary boolean dengan ! untuk negasi
         boolean Word = true;
@@ -88,31 +82,31 @@ public class App {
 
     public static void basic6() {
         // Assignment
-        int angka01 = 5;
-        angka01 = angka01 + angka01;
-        angka01 = angka01 + 5;
-        angka01 = 5 + angka01;
-        System.out.println("Nilai 'angka01'     = " + angka01);
+        int angka = 5;
+        angka = angka + angka;
+        angka = angka + 5;
+        angka = 5 + angka;
+        System.out.println("Nilai 'angka'     = " + angka);
 
-        angka01 = 25;
-        angka01 += 10;
-        System.out.println("Nilai 'angka01' +=' = " + angka01);
+        angka = 25;
+        angka += 10;
+        System.out.println("Nilai 'angka' +=' = " + angka);
 
-        angka01 = 25;
-        angka01 -= 10;
-        System.out.println("Nilai 'angka01' -=' = " + angka01);
+        angka = 25;
+        angka -= 10;
+        System.out.println("Nilai 'angka' -=' = " + angka);
 
-        angka01 = 25;
-        angka01 *= 10;
-        System.out.println("Nilai 'angka01' *=' = " + angka01);
+        angka = 25;
+        angka *= 10;
+        System.out.println("Nilai 'angka' *=' = " + angka);
 
-        angka01 = 25;
-        angka01 /= 10;
-        System.out.println("Nilai 'angka01' /=' = " + angka01);
+        angka = 25;
+        angka /= 10;
+        System.out.println("Nilai 'angka' /=' = " + angka);
 
-        angka01 = 25;
-        angka01 %= 10;
-        System.out.println("Nilai 'angka01' %=' = " + angka01);
+        angka = 25;
+        angka %= 10;
+        System.out.println("Nilai 'angka' %=' = " + angka);
     }
 
     public static void basic7() {
@@ -400,7 +394,7 @@ public class App {
 
     public static void basic10() {
 
-        Scanner userinput = new Scanner(System.in);
+        Scanner user = new Scanner(System.in);
 
         System.out.println("## Persegi ##");
         int sisi, luas, keliling;
@@ -410,14 +404,13 @@ public class App {
 
         System.out.println("======= Luas (Sisi * Sisi)");
         System.out.print("Sisi = ");
-        sisi = userinput.nextInt();
+        sisi = user.nextInt();
         luas = sisi * sisi;
         System.out.println("Luas = " + luas + "\n");
 
         System.out.println("======= Keliling (4 * Sisi)");
         keliling = 4 * sisi;
         System.out.println("Keliling = " + keliling + "\n\n");
-
 
         System.out.println("## Persegi Panjang ##");
         int panjang, lebar;
@@ -427,16 +420,15 @@ public class App {
 
         System.out.println("======= Luas (Panjang * Lebar)");
         System.out.print("panjang = ");
-        panjang = userinput.nextInt();
+        panjang = user.nextInt();
         System.out.print("Lebar = ");
-        lebar = userinput.nextInt();
+        lebar = user.nextInt();
         luas = panjang * lebar;
         System.out.println("Luas = " + luas + "\n");
 
         System.out.println("======= Keliling (2 * (Panjang + Lebar))");
         keliling = 2 * (panjang + lebar);
         System.out.println("Keliling = " + keliling + "\n\n");
-
 
         System.out.println("## Segitiga ##");
         int alas, tinggi, panjang_AB, panjang_BC, panjang_AC;
@@ -447,23 +439,22 @@ public class App {
 
         System.out.println("======= Luas (1/2 * Alas * Tinggi)");
         System.out.print("Alas = ");
-        alas = userinput.nextInt();
+        alas = user.nextInt();
         System.out.print("Tinggi = ");
-        tinggi = userinput.nextInt();
-        lusa_segitiga = 1/2 * alas * tinggi;
+        tinggi = user.nextInt();
+        lusa_segitiga = 1 / 2 * alas * tinggi;
         System.out.println("Luas = " + lusa_segitiga + "\n");
 
         System.out.println("======= Keliling (Panjang AB + BC + AC)");
         System.out.print("Panjang AB = ");
-        panjang_AB = userinput.nextInt();
+        panjang_AB = user.nextInt();
         System.out.print("Panjang BC = ");
-        panjang_BC = userinput.nextInt();
+        panjang_BC = user.nextInt();
         System.out.print("Panjang AC = ");
-        panjang_AC = userinput.nextInt();
+        panjang_AC = user.nextInt();
         keliling = panjang_AB + panjang_BC + panjang_AC;
         System.out.println("Keliling = " + keliling + "\n\n");
 
-        
         System.out.println("## Lingkaran ##");
         int r, diameter;
         double luas_lingkaran, keliling_lingkaran;
@@ -474,7 +465,7 @@ public class App {
 
         System.out.println("======= Luas (PHI * Jari-jari^2)");
         System.out.print("Jari-jari = ");
-        r = userinput.nextInt();
+        r = user.nextInt();
         luas_lingkaran = phi * (r * r);
         System.out.println("Luas = " + luas_lingkaran + "\n");
 
@@ -482,14 +473,437 @@ public class App {
         diameter = 2 * r;
         keliling_lingkaran = phi * diameter;
         System.out.println("Keliling = " + keliling_lingkaran + "\n\n");
-        
-        userinput.close();
+
+        user.close();
     }
 
-    public static void basic11() {
-        
-        System.out.print("Secret");
-        
+    public static void basic13() {
+
+        Scanner user = new Scanner(System.in);
+
+        // Statement (percabangan)
+        int angka;
+
+        System.out.print("Masukkan nilai: ");
+        angka = user.nextInt();
+
+        System.out.println("Nilai = " + angka);
+
+        if (angka == 2) {
+            System.out.println("The number is low secret");
+
+        } else if (angka == 4) {
+            System.out.println("The number is Medium secret");
+
+        } else if (angka == 7) {
+            System.out.println("The number is High secret");
+
+        } else {
+            System.out.println("The number is normal");
+
+        }
+        System.out.print("Done");
+
+        user.close();
+
+    }
+
+    public static void basic14() {
+
+        Scanner user = new Scanner(System.in);
+        int ax, bx;
+
+        System.out.print("Masukkan nilai pertama: ");
+        ax = user.nextInt();
+        System.out.print("Masukkan nilai kedua: ");
+        bx = user.nextInt();
+
+        if (ax == 5) {
+
+            if (bx == 5) {
+                System.out
+                        .println("Angka " + ax + " adalah perkalian 5 dan angka " + bx + " juga merupakan perkalian 5");
+
+            } else {
+                System.out.println(
+                        "Angka " + ax + " adalah perkalian 5 sedangkan angka " + bx + " tidak termasuk perkalian 5");
+
+            }
+        } else if (ax != 10) {
+
+            if (bx == 5) {
+                System.out.println("Angka " + ax + " bukan perkalian 5, tetapi angka " + bx + " merupakan perkalian 5");
+            } else {
+                System.out.println("Angka " + ax + " dan " + bx + " bukan perkalian 5");
+
+            }
+            System.out.println("Program berakhir");
+
+        }
+        user.close();
+
+    }
+
+    public static void basic15() {
+
+        String input;
+        Scanner user = new Scanner(System.in);
+
+        System.out.println("==== Verikasi pendataan ====");
+        System.out.print("Masukkan data: ");
+        input = user.next();
+
+        switch (input) {
+            case "Andi":
+            case "andi":
+                System.out.println("Andi adalah admin");
+                break;
+            case "Secret":
+            case "secret":
+                System.out.println("Silahkan masuk");
+                break;
+            default:
+                System.out.println("Kode bermaslah");
+
+        }
+
+        System.out.println("Verifikasi berakhir\n");
+
+        user.close();
+    }
+
+    public static void basic16() {
+
+        // Ternary operator
+        int input, x;
+
+        Scanner user = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai: ");
+        input = user.nextInt();
+
+        x = (input == 10) ? (input * input) : (input / 2);
+        System.out.println("Nilai input = " + x);
+
+        user.close();
+    }
+
+    public static void basic17() {
+
+        // a operator b
+        Scanner user;
+        float a, b, hasil;
+        char operator;
+
+        user = new Scanner(System.in);
+
+        System.out.print("Nilai a = ");
+        a = user.nextFloat();
+        System.out.print("Operator : ");
+        operator = user.next().charAt(0);
+        System.out.print("Nilai b = ");
+        b = user.nextFloat();
+
+        System.out.println("Hasil input: " + a + " " + operator + " " + b);
+
+        if (operator == '+') {
+            // Penjumalahan
+            hasil = a + b;
+            System.out.println("Hasil = " + hasil);
+
+        } else if (operator == '-') {
+            // Pengurangan
+            hasil = a - b;
+            System.out.println("Hasil = " + hasil);
+
+        } else if (operator == '*') {
+            // Perkalian
+            hasil = a * b;
+            System.out.println("Hasil = " + hasil);
+
+        } else if (operator == '/') {
+            // Pembagian
+            if (b == 0) {
+                System.out.println("Perkalian nol tidak diperbolehkan");
+            }
+            hasil = a / b;
+            System.out.println("Hasil = " + hasil);
+
+        } else {
+            System.out.println("Pilihan tidak tersedia");
+
+        }
+
+        user.close();
+
+    }
+
+    public static void basic18() {
+
+        Scanner user;
+        float a, b, hasil;
+        String operator;
+
+        user = new Scanner(System.in);
+
+        System.out.print("Nilai a = ");
+        a = user.nextFloat();
+        System.out.print("Operator : ");
+        operator = user.next();
+        System.out.print("Nilai b = ");
+        b = user.nextFloat();
+
+        switch (operator) {
+            case "+":
+                // Penjumlahan
+                hasil = a + b;
+                System.out.println("Hasil dari " + a + " + " + b + " = " + hasil);
+                break;
+            case "-":
+                // Pengurangan
+                hasil = a - b;
+                System.out.println("Hasil dari " + a + " - " + b + " = " + hasil);
+                break;
+            case "*":
+                // Penjumlahan
+                hasil = a * b;
+                System.out.println("Hasil dari " + a + " * " + b + " = " + hasil);
+                break;
+            case "/":
+                // Penjumlahan
+                hasil = a / b;
+                System.out.println("Hasil dari " + a + " / " + b + " = " + hasil);
+                break;
+            default:
+                System.out.println("Hasil tidak ditemukan");
+                break;
+        }
+
+        user.close();
+    }
+
+    public static void basic19() {
+
+        // While (kondisi)
+        int a = 0;
+        boolean kondisi = true;
+
+        System.out.println("==== Progress ====");
+
+        while (kondisi) {
+            System.out.println("Looping in " + a);
+            a++;
+
+            if (a == 2) {
+                kondisi = false;
+
+            }
+        }
+        System.out.println("==== Complete ====");
+
+    }
+
+    public static void basic20() {
+
+        // Do (aksi)
+        int a = 0;
+        boolean kondisi = true;
+
+        System.out.println("==== Progress ====");
+
+        do {
+            a++;
+            System.out.println("Looping in " + a);
+
+            if (a == 7) {
+                kondisi = false;
+
+            }
+        }
+
+        while (kondisi);
+        System.out.println("==== Complete ====");
+    }
+
+    public static void basic21() {
+
+        System.out.println("=== Starting Program ===");
+        System.out.println("First proggram");
+        for (int nilai = 0; nilai < 10; nilai++) {
+            System.out.println("For loop ke-" + nilai);
+        }
+
+        System.out.println("Second program");
+        for (int nilai = 0; nilai <= 10; nilai++) {
+            System.out.println("For loop ke-" + nilai);
+        }
+
+        System.out.println("Third program");
+        for (int nilai = 10; nilai >= 0; nilai--) {
+            System.out.println("For loop ke-" + nilai);
+        }
+
+        System.out.println("Fourth program");
+        int nilai = 0;
+        for (; nilai < 10;) {
+
+            System.out.println("For loop ke-" + nilai);
+            nilai++;
+        }
+
+        System.out.println("Complete program");
+    }
+
+    public static void basic22() {
+
+        // Program untuk mwnjumlahkan angka dengan rentang
+        int awal, akhir, total;
+
+        Scanner user = new Scanner(System.in);
+        System.out.print("Masukkan nilai awal   : ");
+        awal = user.nextInt();
+        System.out.print("Masukkan nilai akhir  : ");
+        akhir = user.nextInt();
+
+        total = 0;
+        while (awal <= akhir) {
+
+            total = total + awal;
+            System.out.println("Ditambah " + awal + " menjadi " + total);
+            awal++;
+        }
+
+        user.close();
+    }
+
+    public static void basic23() {
+
+        // Menghitung deret fibonacci
+        int f_n, f_n_1, f_n_2, n;
+
+        Scanner user = new Scanner(System.in);
+        System.out.print("Mengambil nilai fibonacci ke -");
+        n = user.nextInt();
+
+        f_n_2 = 0;
+        f_n_1 = 1;
+        f_n = 1;
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("Nilai ke - " + i + " adalah " + f_n);
+            f_n = f_n_1 + f_n_2;
+            f_n_2 = f_n_1;
+            f_n_1 = f_n;
+
+            user.close();
+        }
+    }
+
+    public static void basic24() {
+
+        // Break, continue % return
+        int a = 0;
+
+        while (true) {
+            a++;
+
+            if (a == 10) {
+                break;
+                // Ini adalah keyword untuk keluar dari loop
+            } else if (a == 5) {
+                continue;
+                // Ini adalah keyword untuk memaksa memluai dari awal
+            } else if (a == 8) {
+                return;
+                // Ini adalah keyword untuk keluar dari program
+            }
+
+            System.out.println("Looping ke - " + a);
+        }
+
+        System.out.println("Selesai");
+    }
+
+    public static void basic25() {
+
+        // Looping bersarang
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(" *");
+            }
+            System.out.print("\n");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(" *");
+                if (i == j) {
+                    break;
+                }
+            }
+            System.out.print("\n");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(" *");
+                if (i + j == 4) {
+                    break;
+                }
+            }
+            System.out.print("\n");
+
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.print(" *");
+                if (i == j) {
+                    break;
+                } else if (i + j == 8) {
+                    break;
+                }
+            }
+
+            System.out.print("\n");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(" *");
+                if (i == j) {
+                    break;
+                }
+            }
+            System.out.print("\n");
+        }
+
+        System.out.println();
+    }
+
+    public static void basic26() {
+
+        int panjang = 5;
+        int lebar = 10;
+
+        for (int i = 0; i < panjang; i++) {
+
+            for (int j = 0; j < lebar; j++) {
+
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
     }
 
 }
