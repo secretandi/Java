@@ -2,43 +2,62 @@
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+# Table of Contents
 
-The workspace contains two folders by default, where:
+# [Basic 01](#basic-01)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# [Basic 02]()
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# [Basic 03](#basic-03)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# [Basic 04](#basic-04)
 
-## Dependency Management
+# [Basic 05](#basic-05)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# [Basic 06](#basic-06)
 
-`Terdapat error pada basic 14`
+# [Basic 07](#basic-07)
+
+# Content
+
+# Basic 01
 
 ```java
-double luas;
-
-// Hitung Luas Persegi Panjang
-luas = Hardcore.luasPersegiPanjang(50, 100);
-display("Luas Persegi Panjang", luas);
-
-// Hitung Luas persegi
-luas = Hardcore.luasPersegi(4);
-display("Luas Persegi", luas);
-
-// Hitung Luas Lingkaran
-luas = Hardcore.luasLingkaran(7);
-display("Luas Lingkaran", luas);
-
-// Hitung Luas Kubus
-luas = Hardcore.luasKubus(8);
-display("Luas Kubus", luas);
-
-// Hitung Luas Balok
-luas = Hardcore.luasBalok(20, 12, 8);
-display("Luas Balok", luas);
+public static void basic1() {
+    System.out.print("Andra");
+}
 ```
+
+# Basic 03
+
+```java
+public static void basic3() {
+
+    // Pengenalan print dan alur eksekusi
+
+    // Println
+    System.out.println("Low user");
+    System.out.println("Medium user");
+    System.out.println("Hard user");
+
+    System.out.println();
+
+    // \n
+    System.out.print("Low user\n");
+    System.out.print("Medium user\n");
+    System.out.print("Hard user\n");
+
+    System.out.println();
+
+    // Tidak menggunakan ln maupun \n
+    System.out.print("Other ");
+    System.out.print("dimension");
+
+    System.out.println("\n");
+
+    // Printf untuk tambahan tipe data int
+    System.out.printf("Angka %d", 2);
+}
+```
+
+#

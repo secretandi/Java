@@ -1,228 +1,408 @@
 package com.basic;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Basic {
 
     public static void basic1() {
-        // Membuat kalimat
-        System.out.println("Programming disaster");
-        System.out.println("Next program\n");
 
-        // Membuat variabel
-        int angka01 = 5;
-        System.out.print("Nilai angka01 = " + angka01 + "\n");
-        angka01 = 10;
-        System.out.println("Nilai perubahan angka01 = " + angka01);
+        System.out.print("Andra");
+    }
 
-        int angka02;
-        angka02 = 20;
-        System.out.println("Nilai angka02 = " + angka02);
+    public static void basic2() {
 
-        // Memanggil sebuah Variabel
-        System.out.printf("Nilai angka02 = %d", angka02);
+        // Folder
     }
 
     public static void basic3() {
-        // Hitungan
+
+        // Pengenalan print dan alur eksekusi
+
+        // Println
+        System.out.println("Low user");
+        System.out.println("Medium user");
+        System.out.println("Hard user");
+
+        System.out.println();
+
+        // \n
+        System.out.print("Low user\n");
+        System.out.print("Medium user\n");
+        System.out.print("Hard user\n");
+
+        System.out.println();
+
+        // Tidak menggunakan ln maupun \n
+        System.out.print("Other ");
+        System.out.print("dimension");
+
+        System.out.println("\n");
+
+        // Printf untuk tambahan tipe data int
+        System.out.printf("Angka %d", 2);
+    }
+
+    public static void basic4() {
+
+        // String[] args
+    }
+
+    public static void basic5() {
+
+        // Tipe data dan Variabel
+        int a = 10; // Assignment
+        System.out.println("Nilai a = " + a);
+
+        a = 20;
+        System.out.println("Nilai a baru = " + a);
+
+        // Deklarasi
+        int b;
+        b = 10;
+        System.out.println("Nilai b = " + b);
+    }
+
+    public static void basic6() {
+
+        // Tipe data pada java
+        // Integer, byte, short, long, double, float, char, boolean
+
+        // Integer (satuan)
+        int i = 10;
+        System.out.println("======= Integer");
+        System.out.println("Nilai integer = " + (i + 1));
+        System.out.println("Nilai min = " + Integer.MIN_VALUE);
+        System.out.println("Nilai max = " + Integer.MAX_VALUE);
+        System.out.println("Besar integer = " + Integer.BYTES + " bytes");
+        System.out.println("Besar integer = " + Integer.SIZE + " bit\n");
+
+        // Byte (satuan)
+        byte b = 10;
+        System.out.println("======= Byte");
+        System.out.println("Nilai byte = " + b);
+        System.out.println("Nilai min = " + Byte.MIN_VALUE);
+        System.out.println("Nilai max = " + Byte.MAX_VALUE);
+        System.out.println("Besar byte = " + Byte.BYTES + " bytes");
+        System.out.println("Besar byte = " + Byte.SIZE + " bit\n");
+
+        // Short (satuan)
+        short s = 10;
+        System.out.println("======= Short");
+        System.out.println("Nilai short = " + s);
+        System.out.println("Nilai min = " + Short.MIN_VALUE);
+        System.out.println("Nilai max = " + Short.MAX_VALUE);
+        System.out.println("Besar short = " + Short.BYTES + " bytes");
+        System.out.println("Besar short = " + Short.SIZE + " bit\n");
+
+        // Long (satuan)
+        long l = 10L;
+        System.out.println("======= Long");
+        System.out.println("Nilai long = " + l);
+        System.out.println("Nilai min = " + Long.MIN_VALUE);
+        System.out.println("Nilai max = " + Long.MAX_VALUE);
+        System.out.println("Besar long = " + Long.BYTES + " bytes");
+        System.out.println("Besar long = " + Long.SIZE + " bit\n");
+
+        // Double (koma, bilangan real)
+        double d = -10.5D;
+        System.out.println("======= Double");
+        System.out.println("Nilai double = " + d);
+        System.out.println("Nilai min = " + Double.MIN_VALUE);
+        System.out.println("Nilai max = " + Double.MAX_VALUE);
+        System.out.println("Besar double = " + Double.BYTES + " bytes");
+        System.out.println("Besar double = " + Double.SIZE + " bit\n");
+
+        // Float (koma, bilangan real)
+        float f = -10.5F;
+        System.out.println("======= Float");
+        System.out.println("Nilai float = " + f);
+        System.out.println("Nilai min = " + Float.MIN_VALUE);
+        System.out.println("Nilai max = " + Float.MAX_VALUE);
+        System.out.println("Besar float = " + Float.BYTES + " bytes");
+        System.out.println("Besar float = " + Float.SIZE + " bit\n");
+
+        // Char (koma, bilangan real) berdasarkan ASCII
+        char c = 10;
+        System.out.println("======= Character");
+        System.out.println("Nilai char = " + c);
+        System.out.println("Nilai min = " + Character.MIN_VALUE);
+        System.out.println("Nilai max = " + Character.MAX_VALUE);
+        System.out.println("Besar char = " + Character.BYTES + " bytes");
+        System.out.println("Besar char = " + Character.SIZE + " bit\n");
+
+        // Boolean (True/False)
+        boolean bool = false;
+        System.out.println("======= Boolean");
+        System.out.println("Nilai boolean = " + bool);
+        System.out.println("Nilai true = " + Boolean.TRUE);
+        System.out.println("Nilai fales = " + Boolean.FALSE);
+    }
+
+    public static void basic7() {
+
+        // Operasi aritmatika
         int angka01 = 10;
         int angka02 = 20;
+        System.out.println("<<< Tipe data Integer >>>");
         System.out.print("Nilai angka01 = " + angka01 + "\nNilai angka02 = " + angka02 + "\n\n");
 
         // Penjumlahan
         int angka03 = angka01 + angka02;
+        System.out.println("======= Penjumlahan");
         System.out.println("Nilai angka01 + angka02 = " + angka03);
         System.out.printf("Nilai angka01 + angka02 = %d\n\n", angka03);
 
         // Pengurangan
         angka03 = angka02 - angka01;
+        System.out.println("======= Pengurangan");
         System.out.println("Nilai angka02 - angka01 = " + angka03);
         System.out.printf("Nilai angka02 - angka01 = %d\n\n", angka03);
 
         // Perkalian
         angka03 = angka01 * angka02;
+        System.out.println("======= Perkalian");
         System.out.println("Nilai angka01 - angka02 = " + angka03);
         System.out.printf("Nilai angka01 - angka02 = %d\n\n", angka03);
 
         // Pembagian
         angka03 = angka02 / angka01;
+        System.out.println("======= Pembagian");
         System.out.println("Nilai angka02 : angka01 = " + angka03);
-        System.out.printf("Nilai angka02 : angka01 = %d\n\n", angka03);
+        System.out.printf("Nilai angka02 : angka01 = %d\n\n\n", angka03);
+
+        float angka04;
+        float angka05 = 10;
+        float angka06 = 15;
+        System.out.println("<<< Tipe data Float >>>");
+        System.out.print("Nilai angka05 = " + angka05 + "\nNilai angka06 = " + angka06 + "\n\n");
+
+        // Pembagian
+        angka04 = angka06 / angka05;
+        System.out.println("======= Pembagian");
+        System.out.println("Nilai angka06 : angka05 = " + angka04 + "\n");
 
         // Modulus (Hasil sisa bagi)
-        angka03 = angka02 % angka01;
-        System.out.println("Nilai angka02 % angka01 = " + angka03);
+        angka04 = angka06 % angka05;
+        System.out.println("======= Modulus");
+        System.out.println("Nilai angka06 % angka05 = " + angka04);
     }
 
-    public static void basic5() {
-        // Unary (Operasi yang dilakukan pada satu variabel)
-        int angka = 5;
-        System.out.printf("Unary '+' = %d menjadi %d\n", angka, +angka);
-        System.out.printf("Unary '-' = %d menjadi %d\n\n", angka, -angka);
+    public static void basic8() {
 
-        angka = 5;
-        angka++;
-        System.out.println("Nilai dengn '++' menjadi " + angka);
+        // Konfersi data
 
-        angka = 5;
-        angka--;
-        System.out.println("Nilai dengn '--' menjadi " + angka);
+        int nilaiInt = 150; // 32Byte
+        System.out.println("Nilai Int = " + nilaiInt);
 
-        angka = 5;
-        System.out.println("Nilai dengn '++' menjadi " + ++angka);
+        // Memperluas rentang ke tipe data yang lebih besar
+        long nilaiLong = nilaiInt;
+        System.out.println("Nilai Long = " + nilaiLong);
 
-        angka = 5;
-        System.out.println("Nilai dengn '--' menjadi " + --angka + "\n");
+        // Memperkecil rentang ke tipe data yang lebih kecil
+        byte nilaiByte = (byte) nilaiInt;
+        System.out.println("Nilai Byte = " + nilaiByte);
 
-        // Unary boolean dengan ! untuk negasi
-        boolean Word = true;
-        System.out.println("Nilai boolean = " + Word);
-        System.out.println("Nilai boolean = " + !Word);
+        System.out.println("Nilai min byte = " + Byte.MIN_VALUE);
+        System.out.println("Nilai max byte = " + Byte.MAX_VALUE);
+
+        // Casting pembagian
+        float a = 10;
+        int b = 8;
+
+        float c = a / b;
+        System.out.printf("\n%f / %d = %f\n", a, b, c);
+
+        int x = 10;
+        int y = 8;
+
+        float z = (float) x / y;
+        System.out.printf("%d / %d = %f", x, y, z);
     }
 
-    public static void basic6() {
+    public static void basic9() {
+
+        // Unary = Operasi yang dilakukan pada satu variabel
+
+        // Unary + dan -
+        int angka1 = 1;
+        System.out.printf("Unary '+', %d menjadi %d\n", angka1, +angka1);
+        System.out.printf("Unary '-', %d menjadi %d\n\n", angka1, -angka1);
+
+        // Unary increment dan decrement
+        // Unary Increment
+        int angka2 = 1;
+        angka2++;
+        System.out.println("======= Unary increment");
+        System.out.println("Angka 1 dengan '++' menjadi = " + angka2 + "\n");
+
+        // Decrement
+        int angka3 = 1;
+        angka3--;
+        System.out.println("======= Unary decrement");
+        System.out.println("Angka 1 dengan '--' menjadi = " + angka3 + "\n");
+
+        int a = 2;
+        int b = 2;
+        a++; // menambah nilai a sebanyak 1
+        ++b; // menambah nilai b sebanyak 1
+        System.out.println("Nilai a = " + ++a); // '++a' akan menambahkan nilai a sebanyak 1
+        System.out.println("Nilai b = " + b++); // 'b++' akan menambahkan nilai b setelah ditampilkan nilai sebelumnya
+        System.out.printf("Nilai b = %d\n\n", b++); // 'b++' dengan menggunakan 'printf' dapat menambahkan nilai b
+
+        // Unary boolean dengan tanda ! untuk negasi
+
+        boolean kata = true;
+        System.out.println("======= Unary boolean");
+        System.out.println("Nilai boolean = " + kata);
+        System.out.println("Nilai boolean = " + !kata);
+    }
+
+    public static void basic10() {
+
         // Assignment
-        int angka = 5;
-        angka = angka + angka;
-        angka = angka + 5;
-        angka = 5 + angka;
-        System.out.println("Nilai 'angka'     = " + angka);
+        int n = 10;
+        System.out.println("Nilai awal dari 'n' adalah " + n + "\n");
 
-        angka = 25;
-        angka += 10;
-        System.out.println("Nilai 'angka' +=' = " + angka);
+        n = 10;
+        n += 2;
+        System.out.println("Nilai 'n' dengan menggunakan '+=' = " + n + "\n");
 
-        angka = 25;
-        angka -= 10;
-        System.out.println("Nilai 'angka' -=' = " + angka);
+        n = 10;
+        n -= 2;
+        System.out.println("Nilai 'n' dengan menggunakan '-=' = " + n + "\n");
 
-        angka = 25;
-        angka *= 10;
-        System.out.println("Nilai 'angka' *=' = " + angka);
+        n = 10;
+        n *= 2;
+        System.out.println("Nilai 'n' dengan menggunakan '*=' = " + n + "\n");
 
-        angka = 25;
-        angka /= 10;
-        System.out.println("Nilai 'angka' /=' = " + angka);
+        n = 10;
+        n /= 2;
+        System.out.println("Nilai 'n' dengan menggunakan '/=' = " + n + "\n");
 
-        angka = 25;
-        angka %= 10;
-        System.out.println("Nilai 'angka' %=' = " + angka);
+        n = 10;
+        n %= 3;
+        System.out.println("Nilai 'n' dengan menggunakan '%=' = " + n + "\n");
     }
 
-    public static void basic7() {
+    public static void basic11() {
+
+        // Operator komparasi (menghasilkan nilai dalam bentuk boolean)
+
         // Operator komparasi (menampilkan nilai dalam bentuk boolean)
         int a, b;
-        boolean c;
+        boolean hasil;
 
         // Operator equal (persamaan)
         a = 10;
         b = 10;
-        c = (a == b);
-        System.out.println("===== Persamaan =====");
-        System.out.printf("%d == %d --> %s \n", a, b, c);
+        hasil = (a == b);
+        System.out.println("======= Persamaan");
+        System.out.printf("%d == %d --> %s \n", a, b, hasil);
 
         a = 10;
         b = 20;
-        c = (a == b);
-        System.out.printf("%d == %d --> %s \n\n", a, b, c);
+        hasil = (a == b);
+        System.out.printf("%d == %d --> %s \n\n", a, b, hasil);
 
         // Operator not equal (pertidaksamaan)
         a = 10;
         b = 20;
-        c = (a != b);
-        System.out.println("===== Pertidaksamaan =====");
-        System.out.printf("%d != %d --> %s \n", a, b, c);
+        hasil = (a != b);
+        System.out.println("======= Pertidaksamaan");
+        System.out.printf("%d != %d --> %s \n", a, b, hasil);
 
         a = 10;
         b = 10;
-        c = (a != b);
-        System.out.printf("%d != %d --> %s \n\n", a, b, c);
-
-        // Operator greater than (lebih dari)
-        a = 20;
-        b = 10;
-        c = (a > b);
-        System.out.println("===== Lebih dari =====");
-        System.out.printf("%d > %d --> %s \n", a, b, c);
-
-        a = 10;
-        b = 20;
-        c = (a > b);
-        System.out.printf("%d > %d --> %s \n\n", a, b, c);
+        hasil = (a != b);
+        System.out.printf("%d != %d --> %s \n\n", a, b, hasil);
 
         // Operator less than (kurang dari)
         a = 10;
         b = 20;
-        c = (a < b);
-        System.out.println("===== Kurang dari =====");
-        System.out.printf("%d < %d --> %s \n", a, b, c);
+        hasil = (a < b);
+        System.out.println("======= Kurang dari");
+        System.out.printf("%d < %d --> %s \n", a, b, hasil);
 
         a = 20;
         b = 10;
-        c = (a < b);
-        System.out.printf("%d < %d --> %s \n\n", a, b, c);
+        hasil = (a < b);
+        System.out.printf("%d < %d --> %s \n\n", a, b, hasil);
 
-        // Operator greater than equal (lebih besar dari sama dengan)
+        // Operator greater than (lebih dari)
         a = 20;
         b = 10;
-        c = (a >= b);
-        System.out.println("===== Lebih besar dari sama dengan =====");
-        System.out.printf("%d >= %d --> %s \n", a, b, c);
-
-        a = 10;
-        b = 10;
-        c = (a >= b);
-        System.out.printf("%d >= %d --> %s \n", a, b, c);
+        hasil = (a > b);
+        System.out.println("======= Lebih dari");
+        System.out.printf("%d > %d --> %s \n", a, b, hasil);
 
         a = 10;
         b = 20;
-        c = (a >= b);
-        System.out.printf("%d >= %d --> %s \n\n", a, b, c);
+        hasil = (a > b);
+        System.out.printf("%d > %d --> %s \n\n", a, b, hasil);
 
         // Operator less than equal (lebih kecil dari sama dengan)
         a = 10;
         b = 20;
-        c = (a <= b);
-        System.out.print("===== Lebih kecil dari sama dengan =====");
-        System.out.printf("%d <= %d --> %s \n", a, b, c);
+        hasil = (a <= b);
+        System.out.print("======= Lebih kecil dari sama dengan");
+        System.out.printf("%d <= %d --> %s \n", a, b, hasil);
 
         a = 10;
         b = 20;
-        c = (a <= b);
-        System.out.printf("%d <= %d --> %s \n", a, b, c);
+        hasil = (a <= b);
+        System.out.printf("%d <= %d --> %s \n", a, b, hasil);
 
         a = 10;
         b = 10;
-        c = (a <= b);
-        System.out.printf("%d <= %d --> %s \n", a, b, c);
+        hasil = (a <= b);
+        System.out.printf("%d <= %d --> %s \n", a, b, hasil);
 
         a = 20;
         b = 10;
-        c = (a <= b);
-        System.out.printf("%d <= %d --> %s \n", a, b, c);
+        hasil = (a <= b);
+        System.out.printf("%d <= %d --> %s \n\n", a, b, hasil);
+
+        // Operator greater than equal (lebih besar dari sama dengan)
+        a = 20;
+        b = 10;
+        hasil = (a >= b);
+        System.out.println("======= Lebih besar dari sama dengan");
+        System.out.printf("%d >= %d --> %s \n", a, b, hasil);
+
+        a = 10;
+        b = 10;
+        hasil = (a >= b);
+        System.out.printf("%d >= %d --> %s \n", a, b, hasil);
+
+        a = 10;
+        b = 20;
+        hasil = (a >= b);
+        System.out.printf("%d >= %d --> %s \n", a, b, hasil);
     }
 
-    public static void basic8() {
+    public static void basic12() {
+
         // Operator logika ---> Operasi yang bisa kita lakukan kepada tipe data boolean
         // AND, OR, XOR, negasi
         boolean a, b, c;
 
         // AND
-        System.out.println("===== AND / (&&) =====");
+        System.out.println("======= AND (&&)");
         a = true;
         b = true;
         c = (a && b);
-        System.out.println(a + " && " + b + " = " + c);
+        System.out.println(a + "  && " + b + "  = " + c);
 
         a = true;
         b = false;
         c = (a && b);
-        System.out.println(a + " && " + b + " = " + c);
+        System.out.println(a + "  && " + b + " = " + c);
 
         a = false;
         b = true;
         c = (a && b);
-        System.out.println(a + " && " + b + " = " + c);
+        System.out.println(a + " && " + b + "  = " + c);
 
         a = false;
         b = false;
@@ -230,21 +410,21 @@ public class Basic {
         System.out.println(a + " && " + b + " = " + c + "\n");
 
         // OR
-        System.out.println("===== OR / (||) =====");
+        System.out.println("======= OR (||)");
         a = true;
         b = true;
         c = (a || b);
-        System.out.println(a + " || " + b + " = " + c);
+        System.out.println(a + "  || " + b + "  = " + c);
 
         a = true;
         b = false;
         c = (a || b);
-        System.out.println(a + " || " + b + " = " + c);
+        System.out.println(a + "  || " + b + " = " + c);
 
         a = false;
         b = true;
         c = (a || b);
-        System.out.println(a + " || " + b + " = " + c);
+        System.out.println(a + " || " + b + "  = " + c);
 
         a = false;
         b = false;
@@ -252,21 +432,21 @@ public class Basic {
         System.out.println(a + " || " + b + " = " + c + "\n");
 
         // XOR
-        System.out.println("===== XOR / (^) =====");
+        System.out.println("======= XOR (^)");
         a = true;
         b = true;
         c = (a ^ b);
-        System.out.println(a + " ^ " + b + " = " + c);
+        System.out.println(a + "  ^ " + b + "  = " + c);
 
         a = true;
         b = false;
         c = (a ^ b);
-        System.out.println(a + " ^ " + b + " = " + c);
+        System.out.println(a + "  ^ " + b + " = " + c);
 
         a = false;
         b = true;
         c = (a ^ b);
-        System.out.println(a + " ^ " + b + " = " + c);
+        System.out.println(a + " ^ " + b + "  = " + c);
 
         a = false;
         b = false;
@@ -274,321 +454,206 @@ public class Basic {
         System.out.println(a + " ^ " + b + " = " + c + "\n");
 
         // NOT / Negasi ---> Flipping (!)
-        System.out.println("===== Negasi (!) =====");
+        System.out.println("======= Negasi (!)");
         a = true;
         b = !a;
-        System.out.println(a + " --> (!) = " + b);
+        System.out.println(a + "  --> (!) = " + b);
 
         a = false;
         b = !a;
         System.out.println(a + " --> (!) = " + b);
     }
 
-    public static void basic9() {
-        // Operator bitwise --> operator untuk melalukan operasi pada nilai bit
-        System.out.println("===== Operator bitwise =====");
-        byte a, b, c, d, e, num1, num2, num3, num4;
-        a = 0;
-        b = 1;
-        c = 2;
-        d = 3;
-        e = 4;
-        String a_bits, b_bits, c_bits, d_bits, e_bits, num1_bits, num2_bits, num3_bits, num4_bits;
-
-        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, a);
-
-        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
-        System.out.printf("%s = %d \n", b_bits, b);
-
-        c_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
-        System.out.printf("%s = %d \n", c_bits, c);
-
-        d_bits = String.format("%8s", Integer.toBinaryString(d)).replace(' ', '0');
-        System.out.printf("%s = %d \n", d_bits, d);
-
-        e_bits = String.format("%8s", Integer.toBinaryString(e)).replace(' ', '0');
-        System.out.printf("%s = %d \n\n", e_bits, e);
-
-        // Operator shift right
-        System.out.println("===== Shift Right << 3 =====");
-        num1 = (byte) (a << 3);
-        num1_bits = String.format("%8s", Integer.toBinaryString(num1)).replace(' ', '0');
-        System.out.printf("%s = %d << %s = %d \n", a_bits, a, num1_bits, num1);
-
-        num2 = (byte) (b << 3);
-        num2_bits = String.format("%8s", Integer.toBinaryString(num2)).replace(' ', '0');
-        System.out.printf("%s = %d << %s = %s \n", b_bits, b, num2_bits, num2);
-
-        num3 = (byte) (c << 3);
-        num3_bits = String.format("%8s", Integer.toBinaryString(num3)).replace(' ', '0');
-        System.out.printf("%s = %d << %s = %d \n\n", c_bits, c, num3_bits, num3);
-
-        // Operator shift left
-        System.out.println("===== Shift Left >> 2 =====");
-        num4 = (byte) (num1 >> 2);
-        num4_bits = String.format("%8s", Integer.toBinaryString(num4)).replace(' ', '0');
-        System.out.printf("%s = %d >> %s = %d \n", num1_bits, num1, num4_bits, num4);
-
-        num4 = (byte) (num2 >> 2);
-        num4_bits = String.format("%8s", Integer.toBinaryString(num4)).replace(' ', '0');
-        System.out.printf("%s = %d >> %s = %s \n", num2_bits, num2, num4_bits, num4);
-
-        num4 = (byte) (num3 >> 2);
-        num4_bits = String.format("%8s", Integer.toBinaryString(num4)).replace(' ', '0');
-        System.out.printf("%s = %d >> %s = %d \n\n", num3_bits, num3, num4_bits, num4);
-
-        // Variabel baru
-        a = 2;
-        b = 4;
-        c = 7;
-
-        // Operator bitwise OR
-        System.out.println("===== Bitwise OR (|) =====");
-        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, a);
-        a_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, b);
-        a_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, c);
-        System.out.println("---------- OR");
-        d = (byte) (a | b | c);
-        d_bits = String.format("%8s", Integer.toBinaryString(d)).replace(' ', '0');
-        System.out.printf("%s = %d \n\n", d_bits, d);
-
-        // Operator bitwise AND
-        System.out.println("===== Bitwise AND (&) =====");
-        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, a);
-        a_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, b);
-        a_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, c);
-        System.out.println("---------- AND");
-        d = (byte) (a & b & c);
-        d_bits = String.format("%8s", Integer.toBinaryString(d)).replace(' ', '0');
-        System.out.printf("%s = %d \n\n", d_bits, d);
-
-        // Operator bitwise XOR
-        System.out.println("===== Bitwise XOR (^) =====");
-        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, a);
-        a_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, b);
-        a_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, c);
-        System.out.println("---------- XOR");
-        d = (byte) (a ^ b ^ c);
-        d_bits = String.format("%8s", Integer.toBinaryString(d)).replace(' ', '0');
-        System.out.printf("%s = %d \n\n", d_bits, d);
-
-        // Operator negasi / NOT
-        System.out.println("===== Bitwise NOT (~) =====");
-        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
-        System.out.printf("%s = %d \n", a_bits, a);
-
-        d = (byte) (~a);
-        d_bits = String.format("%8s", Integer.toBinaryString(d).substring(24));
-        System.out.printf("%s = %d \n", d_bits, d);
-    }
-
-    public static void basic10() {
-
-        Scanner user = new Scanner(System.in);
-
-        System.out.println("## Persegi ##");
-        int sisi, luas, keliling;
-        // Menghitung luas dan keliling persegi
-        // Luas = Sisi * sisi
-        // Keliling = 4 * Sisi
-
-        System.out.println("======= Luas (Sisi * Sisi)");
-        System.out.print("Sisi = ");
-        sisi = user.nextInt();
-        luas = sisi * sisi;
-        System.out.println("Luas = " + luas + "\n");
-
-        System.out.println("======= Keliling (4 * Sisi)");
-        keliling = 4 * sisi;
-        System.out.println("Keliling = " + keliling + "\n\n");
-
-        System.out.println("## Persegi Panjang ##");
-        int panjang, lebar;
-        // Menghitung luas dan keliling persegi panjang
-        // Luas = Panjang * Lebar
-        // Keliling = 2 * (PAnjang * Lebar)
-
-        System.out.println("======= Luas (Panjang * Lebar)");
-        System.out.print("panjang = ");
-        panjang = user.nextInt();
-        System.out.print("Lebar = ");
-        lebar = user.nextInt();
-        luas = panjang * lebar;
-        System.out.println("Luas = " + luas + "\n");
-
-        System.out.println("======= Keliling (2 * (Panjang + Lebar))");
-        keliling = 2 * (panjang + lebar);
-        System.out.println("Keliling = " + keliling + "\n\n");
-
-        System.out.println("## Segitiga ##");
-        int alas, tinggi, panjang_AB, panjang_BC, panjang_AC;
-        double lusa_segitiga;
-        // Menghitung luas dan keliling segitiga
-        // Luas = 0.5 * Alas * Tinggi
-        // Keliling = Panjang AB + Panjang BC + Panjang AC
-
-        System.out.println("======= Luas (1/2 * Alas * Tinggi)");
-        System.out.print("Alas = ");
-        alas = user.nextInt();
-        System.out.print("Tinggi = ");
-        tinggi = user.nextInt();
-        lusa_segitiga = 1 / 2 * alas * tinggi;
-        System.out.println("Luas = " + lusa_segitiga + "\n");
-
-        System.out.println("======= Keliling (Panjang AB + BC + AC)");
-        System.out.print("Panjang AB = ");
-        panjang_AB = user.nextInt();
-        System.out.print("Panjang BC = ");
-        panjang_BC = user.nextInt();
-        System.out.print("Panjang AC = ");
-        panjang_AC = user.nextInt();
-        keliling = panjang_AB + panjang_BC + panjang_AC;
-        System.out.println("Keliling = " + keliling + "\n\n");
-
-        System.out.println("## Lingkaran ##");
-        int r, diameter;
-        double luas_lingkaran, keliling_lingkaran;
-        double phi = 3.14;
-        // Menghitung luas dan keliling lingkaran
-        // Luas = PHI * Jari-jari^2
-        // Keliling = PHI * Diameter
-
-        System.out.println("======= Luas (PHI * Jari-jari^2)");
-        System.out.print("Jari-jari = ");
-        r = user.nextInt();
-        luas_lingkaran = phi * (r * r);
-        System.out.println("Luas = " + luas_lingkaran + "\n");
-
-        System.out.println("======= Keliling (phi * Diameter)");
-        diameter = 2 * r;
-        keliling_lingkaran = phi * diameter;
-        System.out.println("Keliling = " + keliling_lingkaran + "\n\n");
-
-        user.close();
-    }
-
     public static void basic13() {
 
-        Scanner user = new Scanner(System.in);
+        // Operator bitwise --> operator untuk melalukan operasi pada nilai bit
+        byte a = 3;
+        byte b, c;
+        String a_bits, b_bits, c_bits;
 
-        // Statement (percabangan)
-        int angka;
+        // Operator SHIFT LEFT
+        System.out.println("======= SHIFT LEFT (<<)");
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b = (byte) (a << 3);
+        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
+        System.out.printf("%s = %d \n\n", b_bits, b);
 
-        System.out.print("Masukkan nilai: ");
-        angka = user.nextInt();
+        // Operator SHIFT RIGHT
+        System.out.println("======= SHIFT RIGHT (>>)");
+        a = 24;
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b = (byte) (a >> 2);
+        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
+        System.out.printf("%s = %d \n\n", b_bits, b);
 
-        System.out.println("Nilai = " + angka);
+        // Operator BITWISE OR
+        System.out.println("======= BITWISE OR (|)");
+        a = 24;
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b = 12;
+        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
+        System.out.printf("%s = %d \n", b_bits, b);
+        System.out.println("=== OR ===");
+        c = (byte) (a | b);
+        c_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
+        System.out.printf("%s = %d \n\n", c_bits, c);
 
-        if (angka == 2) {
-            System.out.println("The number is low secret");
+        // Operator BITWISE AND
+        System.out.println("======= BITWISE AND (^)");
+        a = 24;
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b = 12;
+        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
+        System.out.printf("%s = %d \n", b_bits, b);
+        System.out.println("=== AND ===");
+        c = (byte) (a & b);
+        c_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
+        System.out.printf("%s = %d \n\n", c_bits, c);
 
-        } else if (angka == 4) {
-            System.out.println("The number is Medium secret");
+        // Operator BITWISE XOR
+        System.out.println("======= BITWISE XOR (~)");
+        a = 24;
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b = 12;
+        b_bits = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
+        System.out.printf("%s = %d \n", b_bits, b);
+        System.out.println("=== XOR ===");
+        c = (byte) (a ^ b);
+        c_bits = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
+        System.out.printf("%s = %d \n\n", c_bits, c);
 
-        } else if (angka == 7) {
-            System.out.println("The number is High secret");
-
-        } else {
-            System.out.println("The number is normal");
-
-        }
-        System.out.print("Done");
-
-        user.close();
-
+        // Operator NEGASI (NOT)
+        System.out.println("======= BITWISE XOR");
+        a = 24;
+        b = (byte) (~a);
+        a_bits = String.format("%8s", Integer.toBinaryString(a)).replace(' ', '0');
+        System.out.printf("%s = %d \n", a_bits, a);
+        b_bits = String.format("%8s", Integer.toBinaryString(b).substring(24));
+        System.out.printf("%s = %d \n", b_bits, b);
     }
 
     public static void basic14() {
 
+        // Mengambil inputan
         Scanner user = new Scanner(System.in);
-        int ax, bx;
+        int panjang, lebar, tinggi, luas, volume;
 
-        System.out.print("Masukkan nilai pertama: ");
-        ax = user.nextInt();
-        System.out.print("Masukkan nilai kedua: ");
-        bx = user.nextInt();
+        // Membuat perhitungan
+        System.out.println("======= Menghitung Luas");
+        System.out.print("Panjang = ");
+        panjang = user.nextInt();
+        System.out.print("Lebar = ");
+        lebar = user.nextInt();
 
-        if (ax == 5) {
+        luas = panjang * lebar;
+        System.out.println("Luas = " + luas + "\n");
 
-            if (bx == 5) {
-                System.out
-                        .println("Angka " + ax + " adalah perkalian 5 dan angka " + bx + " juga merupakan perkalian 5");
+        System.out.println("======= Menghitung Volume");
+        System.out.print("Tinggi = ");
+        tinggi = user.nextInt();
+        volume = luas * tinggi;
+        System.out.println("Volume = " + volume);
 
-            } else {
-                System.out.println(
-                        "Angka " + ax + " adalah perkalian 5 sedangkan angka " + bx + " tidak termasuk perkalian 5");
-
-            }
-        } else if (ax != 10) {
-
-            if (bx == 5) {
-                System.out.println("Angka " + ax + " bukan perkalian 5, tetapi angka " + bx + " merupakan perkalian 5");
-            } else {
-                System.out.println("Angka " + ax + " dan " + bx + " bukan perkalian 5");
-
-            }
-            System.out.println("Program berakhir");
-
-        }
         user.close();
-
     }
 
     public static void basic15() {
 
-        String input;
+        // Operasi Aritmatika
+        int hasil;
+        hasil = 2 + 3 - 4;
+        System.out.println(hasil);
+        hasil = 3 * 6 / 9;
+        System.out.println(hasil);
+
+        // Menggunakan pengelompokan operasi dengan ( )
+        hasil = 60 / (2 * 10);
+        System.out.println(hasil);
+
         Scanner user = new Scanner(System.in);
 
-        System.out.println("==== Verikasi pendataan ====");
-        System.out.print("Masukkan data: ");
-        input = user.next();
+        // Persamaan kaudrat
+        System.out.println("======= Perhitungan Sederhana (a + b * c)");
+        int a, b, c, n;
 
-        switch (input) {
-            case "Andi":
-            case "andi":
-                System.out.println("Andi adalah admin");
-                break;
-            case "Secret":
-            case "secret":
-                System.out.println("Silahkan masuk");
-                break;
-            default:
-                System.out.println("Kode bermaslah");
+        System.out.print("Nilai a = ");
+        a = user.nextInt();
+        System.out.print("Nilai b = ");
+        b = user.nextInt();
+        System.out.print("Nilai c = ");
+        c = user.nextInt();
 
-        }
-
-        System.out.println("Verifikasi berakhir\n");
+        n = a + b * c;
+        System.out.println("Nilai n = " + n);
 
         user.close();
     }
 
+    /**
+     * 
+     */
     public static void basic16() {
 
-        // Ternary operator
-        int input, x;
-
+        // Membuat sebuah objek untuk menangkap input dari user
         Scanner user = new Scanner(System.in);
 
-        System.out.print("Masukkan nilai: ");
-        input = user.nextInt();
+        // Sebuah program sederhana untuk menebak sebuah angka
+        int nilaiBenar = 6;
+        int nilaiTebakan;
+        boolean statusTebakan;
 
-        x = (input == 10) ? (input * input) : (input / 2);
-        System.out.println("Nilai input = " + x);
+        System.out.print("Masukkan nilai tebakan anda: ");
+        nilaiTebakan = user.nextInt();
+        System.out.println("Nilai tebakan anda adalah: " + nilaiTebakan);
+
+        // Operasi langka
+        statusTebakan = (nilaiTebakan == nilaiBenar);
+        System.out.println("Tebakan anda: " + statusTebakan);
+
+        // Operasi aljabar boolean (and / or)
+
+        System.out.println("Masukkan nilai antara 4 dan 9");
+        nilaiTebakan = user.nextInt();
+
+        statusTebakan = (nilaiTebakan > 4) && (nilaiTebakan < 9);
+
+        /*
+         * a | b | c
+         * 0 0 0
+         * 0 1 0
+         * 1 0 0
+         * 1 1 1
+         */
+        System.out.println("Tebakan anda: " + statusTebakan);
 
         user.close();
     }
 
     public static void basic17() {
+
+        // If Statement atau Percabangan
+
+        int a = 5;
+        System.out.println("Nilai = " + a);
+
+        // Ini adalah cabangnya
+        if (a == 10) {
+
+            System.out.println("Ini adalah cabang");
+
+        } else {
+            System.out.println("Ini adalah jalur false");
+        }
+
+        System.out.println("Selesai");
+    }
+
+    public static void basic18() {
 
         // a operator b
         Scanner user;
@@ -638,7 +703,7 @@ public class Basic {
 
     }
 
-    public static void basic18() {
+    public static void basic19() {
 
         Scanner user;
         float a, b, hasil;
@@ -682,7 +747,7 @@ public class Basic {
         user.close();
     }
 
-    public static void basic19() {
+    public static void basic20() {
 
         // While (kondisi)
         int a = 0;
@@ -703,7 +768,7 @@ public class Basic {
 
     }
 
-    public static void basic20() {
+    public static void basic21() {
 
         // Do (aksi)
         int a = 0;
@@ -725,7 +790,7 @@ public class Basic {
         System.out.println("==== Complete ====");
     }
 
-    public static void basic21() {
+    public static void basic22() {
 
         System.out.println("=== Starting Program ===");
         System.out.println("First proggram");
@@ -754,7 +819,7 @@ public class Basic {
         System.out.println("Complete program");
     }
 
-    public static void basic22() {
+    public static void basic23() {
 
         // Program untuk mwnjumlahkan angka dengan rentang
         int awal, akhir, total;
@@ -776,7 +841,7 @@ public class Basic {
         user.close();
     }
 
-    public static void basic23() {
+    public static void basic24() {
 
         // Menghitung deret fibonacci
         int f_n, f_n_1, f_n_2, n;
@@ -800,7 +865,7 @@ public class Basic {
         }
     }
 
-    public static void basic24() {
+    public static void basic25() {
 
         // Break, continue % return
         int a = 0;
@@ -825,7 +890,7 @@ public class Basic {
         System.out.println("Selesai");
     }
 
-    public static void basic25() {
+    public static void basic26() {
 
         // Looping bersarang
         for (int i = 0; i < 5; i++) {
@@ -890,20 +955,135 @@ public class Basic {
         System.out.println();
     }
 
-    public static void basic26() {
+    public static void basic27() {
 
-        int panjang = 5;
-        int lebar = 10;
+        int panjang = 3;
+        int lebar = 5;
 
         for (int i = 0; i < panjang; i++) {
-
             for (int j = 0; j < lebar; j++) {
 
                 System.out.print("* ");
             }
             System.out.println();
         }
-
     }
 
+    public static void basic28() {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan nilai n = ");
+        int nilai = input.nextInt();
+        int nilai_fibonacci = fibonacci(nilai, "atas");
+        System.out.println("Nilai fibonacci ke - " + nilai + " adalah " + nilai_fibonacci);
+
+        input.close();
+    }
+
+    private static int fibonacci(int n, String daun) {
+
+        System.out.println("Daun " + daun);
+        System.out.println("Fibonacci ke - " + n);
+        if (n == 1 || n == 0) {
+            return n;
+        } else {
+            return fibonacci(n - 1, "kiri") + fibonacci(n - 2, "kanan");
+        }
+    }
+
+    public static void basic29() {
+
+        System.out.print("Masukkan angka integer = ");
+        int hasilInteger = tambah(4, 5);
+        printAngka(hasilInteger);
+
+        float hasilFloat = tambah(4.5f, 4);
+        printAngka(hasilFloat);
+
+        printAngka(2);
+        printAngka(4);
+        printAngka(7);
+        printAngka(2.7f);
+        printAngka(2.7d);
+    }
+
+    private static int tambah(int angkaInt1, int angkaInt2) {
+
+        return angkaInt1 + angkaInt2;
+    }
+
+    private static float tambah(float angkaFLoat1, float angkaFloat2) {
+
+        return angkaFLoat1 + angkaFloat2;
+    }
+
+    private static void printAngka(int angkaInteger) {
+
+        System.out.println("Angka tersebut adalah integer dengan nilai " + angkaInteger);
+    }
+
+    private static void printAngka(float angkaInteger) {
+
+        System.out.println("Angka tersebut adalah float dengan nilai " + angkaInteger);
+    }
+
+    private static void printAngka(double angkaInteger) {
+
+        System.out.println("Angka tersebut adalah double dengan nilai " + angkaInteger);
+    }
+
+    public static void basic30() {
+
+        // Assigment array
+        System.out.println("Assigment Array");
+
+        // tipe data[] nama = {komponen - komponen};*
+        // Index = 0 1 2 3
+        // | | | |
+        int[] arrayInteger = { 1, 2, 3, 4 };
+        arrayInteger[0] = 11;
+
+        System.out.println(arrayInteger[0]);
+        System.out.println(arrayInteger[1]);
+        System.out.println(arrayInteger[2]);
+        System.out.println(arrayInteger[3]);
+
+        // Deklarasi array
+        // Tipe data[] nama = new tipe data[jumlahArray];*
+        float[] arrayFloat = new float[4];
+        arrayFloat[3] = 11.5f;
+
+        System.out.println(arrayFloat[0]);
+        System.out.println(arrayFloat[1]);
+        System.out.println(arrayFloat[2]);
+        System.out.println(arrayFloat[3]);
+
+        System.out.println("\n" + Arrays.toString(arrayInteger));
+        System.out.println(Arrays.toString(arrayFloat));
+    }
+
+    public static void basic31() {
+
+        int[] arrayAngka = { 2, 4, 7, 13 };
+
+        // Looping standard
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Index ke " + i + " adalah " + arrayAngka[i]);
+        }
+
+        System.out.println();
+
+        // Looping dengan properti array
+        for (int i = 0; i < arrayAngka.length; i++) {
+            System.out.println("Index ke " + i + " adalah " + arrayAngka[i]);
+        }
+
+        System.out.println();
+
+        // Looping khususon untuk array <-- array
+        for (int angka : arrayAngka) {
+
+            System.out.println("Angka pada looping ini adalah " + angka);
+        }
+    }
 }
